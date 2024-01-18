@@ -1,0 +1,1 @@
+export { OtherDaysFotos } from "./OtherDaysFotos/OtherDaysFotos";
