@@ -20,3 +20,13 @@ export async function getOtherDaysPicture(startDate: string, endDate: string) {
     console.log(err);
   }
 }
+
+export async function getSpecificPicture(date: string) {
+  try {
+    const result = await axios.get(`${baseURL}${apiKey}&date=${date}`);
+    console.log('fetching')
+    return result.data;
+  } catch (err) {
+    console.log(err);
+  }
+}

@@ -51,9 +51,8 @@ export function OtherDaysFotos({ defaultDate }: { defaultDate: string }) {
         </Button>
       </div>
       <div className={styles.otherDays}>
-        {/* <LoadingIndicator /> */}
         {!isPending ? (
-          fetchedData.map((item: fetchedDataItem) => (
+          fetchedData?.reverse().map((item: fetchedDataItem) => (
             <OtherDayCard link={item.url} date={item.date} key={item.url} />
           ))
         ) : (
