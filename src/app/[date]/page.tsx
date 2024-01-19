@@ -8,7 +8,6 @@ export default async function PhotoPage({
   params: { date: string };
 }) {
   const picture = await getSpecificPicture(params.date);
-  console.log(picture);
   return (
     <Main>
       <PictureOfTheDay
