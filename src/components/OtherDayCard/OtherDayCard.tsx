@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Box, Typography } from "@mui/material";
 
 type OtherDayCardProps = {
   link: string,
@@ -8,11 +9,11 @@ type OtherDayCardProps = {
 
 export function OtherDayCard({ link, date }: OtherDayCardProps) {
  return (
-   <div style={{marginTop: '1.5rem'}}>
+   <Box sx={{ marginTop: "1.5rem" }}>
      <Image src={link} width="200" height="150" alt={date} />
-     <p>
+     <Typography>
        Date: <Link href={date}>{date}</Link>
-     </p>
-   </div>
+     </Typography>
+   </Box>
  );
 }

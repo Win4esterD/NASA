@@ -3,8 +3,10 @@ import { apiKey, baseURL } from "./credentials";
 
 export async function getPictureOfTheDay() {
   try {
-    const result = await axios.get(`${baseURL}${apiKey}`);
-    return result.data;
+    const response = await fetch(`${baseURL}${apiKey}`, {
+      next: { revalidate: 3600 },
+    });
+    return response.json();
   } catch (err) {
     console.log(err);
   }
