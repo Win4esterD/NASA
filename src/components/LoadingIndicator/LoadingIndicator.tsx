@@ -1,14 +1,5 @@
-import Image from "next/image"
-import styles from './LoadingIndicator.module.css';
+import CircularProgress from "@mui/material/CircularProgress";
 
-export function LoadingIndicator () {
-  return (
-    <Image
-      src={"/images/icons/rolling.png"}
-      alt="Loading indicator"
-      width="100"
-      height="100"
-      className={styles.rot}
-    />
-  );
+export function LoadingIndicator() {
+  return <CircularProgress sx={{ width: "200px" }} />;
 }
