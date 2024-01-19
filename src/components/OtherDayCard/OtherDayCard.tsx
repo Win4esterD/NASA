@@ -12,7 +12,7 @@ export function OtherDayCard({ link, date }: OtherDayCardProps) {
    <Box sx={{ marginTop: "1.5rem" }}>
      <Image src={link} width="200" height="150" alt={date} />
      <Typography>
-       Date: <Link href={date}>{date}</Link>
+       Date: <Link href={date} target="_blank">{date}</Link>
      </Typography>
    </Box>
  );
