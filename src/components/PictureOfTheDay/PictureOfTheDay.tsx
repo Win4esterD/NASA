@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./PictureOfTheDay.module.css";
+import { Typography } from "@mui/material";
 
 type PictureOfTheDayProps = {
   date: string;
@@ -11,19 +12,19 @@ type PictureOfTheDayProps = {
 export function PictureOfTheDay({ date, url, author, explanation }: PictureOfTheDayProps) {
   return (
     <>
-      <h1>Picture of the day: {date}</h1>
+      <Typography variant="h1" sx={{fontSize: '2.5rem'}}>Picture of the day: {date}</Typography>
       <Image
         priority={true}
         src={url}
         alt="Picture of the day"
         width="800"
         height="550"
-        className={styles.picture}
+        style={{maxWidth: '95%'}}
       />
-      <p>
+      <Typography sx={{marginTop: '1rem'}}>
         <b>Author</b>: {author}
-      </p>
-      <p className={styles.explanation}>{explanation}</p>
+      </Typography>
+      <Typography sx={{width: '80%', marginTop: '1rem'}}>{explanation}</Typography>
     </>
   );
 }
