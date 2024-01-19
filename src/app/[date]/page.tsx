@@ -11,12 +11,12 @@ export default async function PhotoPage({
   return (
     <Main>
       <PictureOfTheDay
-        date={picture.date}
-        url={picture.url}
-        author={picture.copyright}
-        explanation={picture.explanation}
+        date={picture?.date}
+        url={picture?.url}
+        author={picture?.copyright}
+        explanation={picture?.explanation}
       />
-      <OtherDaysFotos defaultDate={picture.date} />
+      <OtherDaysFotos defaultDate={picture?.date} />
     </Main>
   );
 }
