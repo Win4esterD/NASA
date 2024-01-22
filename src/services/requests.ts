@@ -4,7 +4,7 @@ import { apiKey, baseURL } from "./credentials";
 export async function getPictureOfTheDay() {
   try {
     const response = await fetch(`${baseURL}${apiKey}`, {
-      next: { revalidate: 3600 },
+      cache: 'no-cache',
     });
     return response.json();
   } catch (err) {
