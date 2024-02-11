@@ -8,12 +8,18 @@ export const styles = {
   },
   h2: {
     fontSize: "2rem",
+    padding: "0 0.5rem",
+    marginTop: "1.5rem",
+    "@media (max-width: 390px)": {
+      fontSize: "1.5rem",
+    },
   },
   labelsContainer: {
     display: "flex",
     gap: "2rem",
     marginTop: "1rem",
-    paddingBottom: '1rem',
+    padding: "0 0.5rem 1rem 0.5rem",
+    flexWrap: "wrap",
   },
   labelAndInput: {
     display: "flex",
