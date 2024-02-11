@@ -1,8 +1,6 @@
 import { getPictureOfTheDay } from "@/services/requests";
 import { OtherDaysFotos } from "@/sections";
 import {PictureOfTheDay, Main} from '@/components';
-import { revalidatePath } from "next/cache";
-revalidatePath("/");
 
 export default async function Home() {
   const pictureOfTheDay = await getPictureOfTheDay();
